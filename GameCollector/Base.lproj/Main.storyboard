@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Image Dictionary-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="GameCollector" customModuleProvider="target" sceneMemberID="viewController">
@@ -34,10 +34,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="auR-cX-6Bl">
+                    <navigationItem key="navigationItem" title="Image Dictionary" id="auR-cX-6Bl">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6CA-M4-m1W">
                             <connections>
-                                <segue destination="CDo-Pa-Smj" kind="show" id="Tgc-J9-zws"/>
+                                <segue destination="CDo-Pa-Smj" kind="show" identifier="gameSegue" id="Tgc-J9-zws"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -57,7 +57,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_0034.JPG" translatesAutoresizingMaskIntoConstraints="NO" id="i4S-F3-MU1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imagePlaceHolder.png" translatesAutoresizingMaskIntoConstraints="NO" id="i4S-F3-MU1">
                                 <rect key="frame" x="47" y="114" width="280" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="1lG-fs-c6M"/>
@@ -67,8 +67,8 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Krt-hh-7vP">
                                 <rect key="frame" x="47.5" y="314" width="280" height="30"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YhT-9Z-454">
                                 <rect key="frame" x="169" y="369" width="36" height="36"/>
@@ -78,12 +78,23 @@
                                     <action selector="addTapped:" destination="CDo-Pa-Smj" eventType="touchUpInside" id="Zzl-1h-jrv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwb-Q3-0vc">
+                                <rect key="frame" x="159" y="415" width="57" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="CDo-Pa-Smj" eventType="touchUpInside" id="p6h-HS-GUA"/>
+                                    <action selector="deleteTapped:" destination="CDo-Pa-Smj" eventType="touchUpInside" id="sUp-Ta-3OL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="i4S-F3-MU1" firstAttribute="centerX" secondItem="QFU-n2-Dcv" secondAttribute="centerX" id="F0N-Z4-Gu2"/>
                             <constraint firstItem="YhT-9Z-454" firstAttribute="top" secondItem="Krt-hh-7vP" secondAttribute="bottom" constant="25" id="Ith-02-aNk"/>
+                            <constraint firstItem="Kwb-Q3-0vc" firstAttribute="top" secondItem="YhT-9Z-454" secondAttribute="bottom" constant="10" id="Lp3-zt-9ug"/>
                             <constraint firstItem="Krt-hh-7vP" firstAttribute="centerX" secondItem="QFU-n2-Dcv" secondAttribute="centerX" id="Ovh-h5-Myv"/>
+                            <constraint firstItem="Kwb-Q3-0vc" firstAttribute="centerX" secondItem="QFU-n2-Dcv" secondAttribute="centerX" id="ZzO-jK-juW"/>
                             <constraint firstItem="Krt-hh-7vP" firstAttribute="width" secondItem="i4S-F3-MU1" secondAttribute="width" id="ga4-gC-kJR"/>
                             <constraint firstItem="Krt-hh-7vP" firstAttribute="top" secondItem="i4S-F3-MU1" secondAttribute="bottom" constant="50" id="nJM-pJ-ZmY"/>
                             <constraint firstItem="YhT-9Z-454" firstAttribute="centerX" secondItem="QFU-n2-Dcv" secondAttribute="centerX" id="okZ-ed-hlo"/>
@@ -106,6 +117,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="YhT-9Z-454" id="SsM-Ut-00A"/>
+                        <outlet property="deleteButton" destination="Kwb-Q3-0vc" id="bVc-sj-JI7"/>
                         <outlet property="gameImageView" destination="i4S-F3-MU1" id="VB2-xL-2Eh"/>
                         <outlet property="titleTextField" destination="Krt-hh-7vP" id="BIq-Hw-4eX"/>
                     </connections>
@@ -134,6 +147,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="IMG_0034.JPG" width="1932" height="2576"/>
+        <image name="imagePlaceHolder.png" width="1100" height="619"/>
     </resources>
 </document>

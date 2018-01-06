@@ -15,6 +15,7 @@
 		6209F79B1FFF600B008E788D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6209F7991FFF600B008E788D /* LaunchScreen.storyboard */; };
 		6209F7A31FFF7307008E788D /* IMG_0034.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6209F7A21FFF7307008E788D /* IMG_0034.JPG */; };
 		6209F7A71FFF75D2008E788D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6209F7A61FFF75D2008E788D /* GameViewController.swift */; };
+		62E3D3372000947700B53BEB /* imagePlaceHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = 62E3D3362000947700B53BEB /* imagePlaceHolder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		6209F79C1FFF600B008E788D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6209F7A21FFF7307008E788D /* IMG_0034.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0034.JPG; sourceTree = "<group>"; };
 		6209F7A61FFF75D2008E788D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		62E3D3362000947700B53BEB /* imagePlaceHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePlaceHolder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				6209F79C1FFF600B008E788D /* Info.plist */,
 				6209F7941FFF600B008E788D /* GameCollector.xcdatamodeld */,
 				6209F7A21FFF7307008E788D /* IMG_0034.JPG */,
+				62E3D3362000947700B53BEB /* imagePlaceHolder.png */,
 			);
 			path = GameCollector;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			files = (
 				6209F79B1FFF600B008E788D /* LaunchScreen.storyboard in Resources */,
 				6209F7981FFF600B008E788D /* Assets.xcassets in Resources */,
+				62E3D3372000947700B53BEB /* imagePlaceHolder.png in Resources */,
 				6209F7A31FFF7307008E788D /* IMG_0034.JPG in Resources */,
 				6209F7931FFF600B008E788D /* Main.storyboard in Resources */,
 			);
@@ -287,6 +291,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9N278X6T5;
 				INFOPLIST_FILE = GameCollector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = brandonbezanson.GameCollector;
@@ -301,6 +306,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = G9N278X6T5;
 				INFOPLIST_FILE = GameCollector/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = brandonbezanson.GameCollector;
